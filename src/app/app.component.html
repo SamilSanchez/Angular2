@@ -1,5 +1,23 @@
-<h1>HOLA {{name}}</h1>
+<h1>La pagina cargada fue App Component Html</h1>
+
+<hr>
+
+<p>HOLA {{name}}</p>
 
 <input type="text" [(ngModel)]='name'/>
 
 <button type="button" (click)="eventoClick()" name="button">Boton</button>
+
+ <h1> Input component html</h1>
+ <hr>
+ <div *ngFor="let voto of votos">
+   <input-component voto="{{voto.nombre}}"> </input-component>
+ </div>
+
+ <h1> Herore Detail component html</h1>
+ <hr>
+ {{heroes}}
+ <div *ngFor="let item of heroes">
+   {{item.nombre}}
+   <heroe-detalle heroe="{{item}}"> </heroe-detalle>
+ </div>
